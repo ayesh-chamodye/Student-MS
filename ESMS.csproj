@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CFAE5DE-4E48-4015-89EF-DED587F4AB76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ESMS</RootNamespace>
+    <AssemblyName>ESMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>G:\esms finalyzed\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>d16be8c4701395972a4c753e93de1217__1_-removebg-preview %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3F79E57370725C99180BE2463B3F71039D5034F9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ESMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MaterialSkin.2.2.3.1\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ESMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ESMSDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESMSDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ESMSDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESMSDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ESMSDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESMSDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ESMSDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESMSDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ESMSDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ESMSDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\attend_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\attend_report.Designer.cs">
+      <DependentUpon>attend_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\pay.Designer.cs">
+      <DependentUpon>pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\pay_report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\pay_report.Designer.cs">
+      <DependentUpon>pay_report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\student_attends.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\student_attends.Designer.cs">
+      <DependentUpon>student_attends.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\update_courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\update_courses.Designer.cs">
+      <DependentUpon>update_courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\update_student.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\update_student.Designer.cs">
+      <DependentUpon>update_student.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\welcome.Designer.cs">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\ApplicationSettings.cs" />
+    <Compile Include="User Controls\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\courseadd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Controls\courseadd.Designer.cs">
+      <DependentUpon>courseadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\notifydialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\notifydialog.Designer.cs">
+      <DependentUpon>notifydialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\qr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User Controls\qr.Designer.cs">
+      <DependentUpon>qr.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Screens\attend_report.resx">
+      <DependentUpon>attend_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\pay.resx">
+      <DependentUpon>pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\pay_report.resx">
+      <DependentUpon>pay_report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\student_attends.resx">
+      <DependentUpon>student_attends.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\update_courses.resx">
+      <DependentUpon>update_courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\update_student.resx">
+      <DependentUpon>update_student.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\welcome.resx">
+      <DependentUpon>welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\courseadd.resx">
+      <DependentUpon>courseadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\notifydialog.resx">
+      <DependentUpon>notifydialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Controls\qr.resx">
+      <DependentUpon>qr.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ESMSDataSet.xsc">
+      <DependentUpon>ESMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESMSDataSet.xss">
+      <DependentUpon>ESMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet1.xsc">
+      <DependentUpon>ESMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESMSDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESMSDataSet1.xss">
+      <DependentUpon>ESMSDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet2.xsc">
+      <DependentUpon>ESMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESMSDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESMSDataSet2.xss">
+      <DependentUpon>ESMSDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet3.xsc">
+      <DependentUpon>ESMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESMSDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESMSDataSet3.xss">
+      <DependentUpon>ESMSDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet4.xsc">
+      <DependentUpon>ESMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESMSDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESMSDataSet4.xss">
+      <DependentUpon>ESMSDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet5.xsc">
+      <DependentUpon>ESMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ESMSDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ESMSDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ESMSDataSet5.xss">
+      <DependentUpon>ESMSDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="ESMS_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="d16be8c4701395972a4c753e93de1217__1_-removebg-preview %281%29.ico" />
+    <Content Include="esoft-logo.ico" />
+    <None Include="Resources\schedule.png" />
+    <None Include="Resources\payment.png" />
+    <None Include="Resources\show.png" />
+    <None Include="Resources\hide.png" />
+    <None Include="Resources\d16be8c4701395972a4c753e93de1217__1_-removebg-preview.png" />
+    <None Include="Resources\d16be8c4701395972a4c753e93de1217__1_-removebg-preview %281%29.png" />
+    <Content Include="Scripts\jquery.slimscroll.js" />
+    <Content Include="Scripts\jquery.slimscroll.min.js" />
+    <None Include="Resources\camera %281%29.png" />
+    <None Include="Resources\Blue_Tosca_Modern_Game_Logo_20240602_090417_0000-removebg-preview.png" />
+    <None Include="Resources\arck_logo.jpg" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\qr.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\edit %281%29.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\help-icon-12.png" />
+    <None Include="Resources\OIP %281%29.jpg" />
+    <None Include="Resources\question-mark-circle.jpg" />
+    <None Include="Resources\help1.png" />
+    <None Include="Resources\help.png" />
+    <None Include="Resources\esoft-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
